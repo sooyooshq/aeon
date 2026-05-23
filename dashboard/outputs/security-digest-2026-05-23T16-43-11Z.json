@@ -1,0 +1,754 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Security Digest — 2026-05-23",
+        "description": "Claude managed agents"
+      },
+      "children": [
+        "verdict_section",
+        "sep1",
+        "patch_today_section",
+        "sep2",
+        "patch_week_section",
+        "sep3",
+        "monitor_section"
+      ]
+    },
+    "verdict_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "verdict_heading",
+        "verdict_text",
+        "verdict_sources"
+      ]
+    },
+    "verdict_heading": {
+      "type": "Text",
+      "props": {
+        "text": "Verdict",
+        "variant": "lead"
+      }
+    },
+    "verdict_text": {
+      "type": "Text",
+      "props": {
+        "text": "1 actively exploited, 5 to schedule this week, 3 to monitor.",
+        "variant": "body"
+      }
+    },
+    "verdict_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: KEV, GH Advisory, EPSS",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_today_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_today_heading",
+        "cve_2025_34291"
+      ]
+    },
+    "patch_today_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH TODAY",
+        "level": "h2"
+      }
+    },
+    "cve_2025_34291": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cve_link",
+        "cve_meta",
+        "cve_desc",
+        "cve_action"
+      ]
+    },
+    "cve_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CVE-2025-34291",
+        "href": "https://github.com/advisories/GHSA-577h-p2hh-v4mv"
+      }
+    },
+    "cve_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_langflow_pip",
+        "badge_kev_added",
+        "stat_epss_1",
+        "stat_cvss_1"
+      ]
+    },
+    "badge_langflow_pip": {
+      "type": "Badge",
+      "props": {
+        "text": "langflow (pip)",
+        "variant": "outline"
+      }
+    },
+    "badge_kev_added": {
+      "type": "Badge",
+      "props": {
+        "text": "KEV added 2026-05-21",
+        "variant": "secondary"
+      }
+    },
+    "stat_epss_1": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.34"
+      }
+    },
+    "stat_cvss_1": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.8"
+      }
+    },
+    "cve_desc": {
+      "type": "Text",
+      "props": {
+        "text": "CORS misconfiguration + SameSite=None refresh cookie → attackers make cross-origin requests with credentials, pivot to RCE via obtained tokens. Exploited per CISA (due 2026-06-04).",
+        "variant": "body"
+      }
+    },
+    "cve_action": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Upgrade langflow above 1.6.9 or apply vendor mitigations immediately; do not expose Langflow admin to the internet."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "patch_week_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "patch_week_heading",
+        "adv1",
+        "adv2",
+        "adv3",
+        "adv4",
+        "adv5"
+      ]
+    },
+    "patch_week_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PATCH THIS WEEK",
+        "level": "h2"
+      }
+    },
+    "adv1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv1_link",
+        "adv1_meta",
+        "adv1_desc",
+        "adv1_action"
+      ]
+    },
+    "adv1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-g6ww-w5j2-r7x3",
+        "href": "https://github.com/advisories/GHSA-g6ww-w5j2-r7x3"
+      }
+    },
+    "adv1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv1_pkg",
+        "adv1_cvss",
+        "adv1_epss",
+        "adv1_poc"
+      ]
+    },
+    "adv1_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "boxlite (npm/pip/go/rust)",
+        "variant": "outline"
+      }
+    },
+    "adv1_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "10.0"
+      }
+    },
+    "adv1_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "n/a"
+      }
+    },
+    "adv1_poc": {
+      "type": "Badge",
+      "props": {
+        "text": "no public PoC",
+        "variant": "secondary"
+      }
+    },
+    "adv1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Permission bypass lets any caller overwrite files flagged read-only.",
+        "variant": "body"
+      }
+    },
+    "adv1_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade boxlite / @boxlite-ai/boxlite to ≥0.9.0 across all SDK languages."
+      }
+    },
+    "adv2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv2_link",
+        "adv2_meta",
+        "adv2_desc",
+        "adv2_action"
+      ]
+    },
+    "adv2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-f396-4rp4-7v2j",
+        "href": "https://github.com/advisories/GHSA-f396-4rp4-7v2j"
+      }
+    },
+    "adv2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv2_pkg",
+        "adv2_cvss",
+        "adv2_epss"
+      ]
+    },
+    "adv2_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "boxlite (npm/pip/go/rust)",
+        "variant": "outline"
+      }
+    },
+    "adv2_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "9.6"
+      }
+    },
+    "adv2_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "n/a"
+      }
+    },
+    "adv2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Path traversal in the same package allows arbitrary file write on the host.",
+        "variant": "body"
+      }
+    },
+    "adv2_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade to ≥0.9.0."
+      }
+    },
+    "adv3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv3_link",
+        "adv3_meta",
+        "adv3_desc",
+        "adv3_action"
+      ]
+    },
+    "adv3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-cr22-wjx7-2w6m",
+        "href": "https://github.com/advisories/GHSA-cr22-wjx7-2w6m"
+      }
+    },
+    "adv3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv3_pkg",
+        "adv3_cvss",
+        "adv3_epss"
+      ]
+    },
+    "adv3_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "mcp-server-kubernetes (npm)",
+        "variant": "outline"
+      }
+    },
+    "adv3_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "8.8"
+      }
+    },
+    "adv3_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "n/a"
+      }
+    },
+    "adv3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Tool access controls enforced only in the presentation layer; execution layer ignores them. Any caller can invoke restricted Kubernetes tools.",
+        "variant": "body"
+      }
+    },
+    "adv3_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade mcp-server-kubernetes to ≥3.6.0."
+      }
+    },
+    "adv4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv4_link",
+        "adv4_meta",
+        "adv4_desc",
+        "adv4_action"
+      ]
+    },
+    "adv4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-vrxg-gm77-7q5g",
+        "href": "https://github.com/advisories/GHSA-vrxg-gm77-7q5g"
+      }
+    },
+    "adv4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv4_pkg",
+        "adv4_cvss",
+        "adv4_epss"
+      ]
+    },
+    "adv4_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "windows-mcp (pip)",
+        "variant": "outline"
+      }
+    },
+    "adv4_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "n/a"
+      }
+    },
+    "adv4_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "n/a"
+      }
+    },
+    "adv4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "HTTP transport accepts unauthenticated requests with wildcard CORS; gives callers full PowerShell control.",
+        "variant": "body"
+      }
+    },
+    "adv4_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade windows-mcp to ≥0.7.5 or firewall MCP port immediately."
+      }
+    },
+    "adv5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adv5_link",
+        "adv5_meta",
+        "adv5_desc",
+        "adv5_action"
+      ]
+    },
+    "adv5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-q2f7-m237-v562",
+        "href": "https://github.com/advisories/GHSA-q2f7-m237-v562"
+      }
+    },
+    "adv5_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "adv5_pkg",
+        "adv5_cvss",
+        "adv5_epss"
+      ]
+    },
+    "adv5_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "@hulumi/policies (npm)",
+        "variant": "outline"
+      }
+    },
+    "adv5_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "n/a"
+      }
+    },
+    "adv5_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "n/a"
+      }
+    },
+    "adv5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub OIDC trust policy bypass via AWS set-qualified condition operators; a forked or sibling repo can assume your production role.",
+        "variant": "body"
+      }
+    },
+    "adv5_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Upgrade @hulumi/policies to ≥1.3.2 and audit OIDC trust conditions."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "monitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "monitor_heading",
+        "mon1",
+        "mon2",
+        "mon3"
+      ]
+    },
+    "monitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MONITOR",
+        "level": "h2"
+      }
+    },
+    "mon1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mon1_link",
+        "mon1_meta",
+        "mon1_desc",
+        "mon1_action"
+      ]
+    },
+    "mon1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-j3vx-cx2r-pvg8",
+        "href": "https://github.com/advisories/GHSA-j3vx-cx2r-pvg8"
+      }
+    },
+    "mon1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mon1_pkg",
+        "mon1_cvss",
+        "mon1_status"
+      ]
+    },
+    "mon1_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "network-ai (npm)",
+        "variant": "outline"
+      }
+    },
+    "mon1_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.6"
+      }
+    },
+    "mon1_status": {
+      "type": "Badge",
+      "props": {
+        "text": "no patch yet",
+        "variant": "secondary"
+      }
+    },
+    "mon1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Empty default MCP secret allows any cross-origin request to invoke tools without authentication.",
+        "variant": "body"
+      }
+    },
+    "mon1_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Track for patch; avoid exposing network-ai MCP server to untrusted origins."
+      }
+    },
+    "mon2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mon2_link",
+        "mon2_meta",
+        "mon2_desc",
+        "mon2_action"
+      ]
+    },
+    "mon2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-m549-qq94-fvhg",
+        "href": "https://github.com/advisories/GHSA-m549-qq94-fvhg"
+      }
+    },
+    "mon2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mon2_pkg",
+        "mon2_cvss",
+        "mon2_patch"
+      ]
+    },
+    "mon2_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "lmdeploy (pip)",
+        "variant": "outline"
+      }
+    },
+    "mon2_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.8"
+      }
+    },
+    "mon2_patch": {
+      "type": "Badge",
+      "props": {
+        "text": "patch: ≥0.13.0",
+        "variant": "secondary"
+      }
+    },
+    "mon2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Hardcoded trust_remote_code=True loads arbitrary remote code during model init with no user opt-out.",
+        "variant": "body"
+      }
+    },
+    "mon2_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Schedule upgrade to lmdeploy ≥0.13.0."
+      }
+    },
+    "mon3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "mon3_link",
+        "mon3_meta",
+        "mon3_desc",
+        "mon3_action"
+      ]
+    },
+    "mon3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GHSA-7hh5-prp2-mfh5",
+        "href": "https://github.com/advisories/GHSA-7hh5-prp2-mfh5"
+      }
+    },
+    "mon3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "mon3_pkg",
+        "mon3_cvss",
+        "mon3_epss",
+        "mon3_status"
+      ]
+    },
+    "mon3_pkg": {
+      "type": "Badge",
+      "props": {
+        "text": "sagemaker (pip)",
+        "variant": "outline"
+      }
+    },
+    "mon3_cvss": {
+      "type": "Stat",
+      "props": {
+        "label": "CVSS",
+        "value": "7.2"
+      }
+    },
+    "mon3_epss": {
+      "type": "Stat",
+      "props": {
+        "label": "EPSS",
+        "value": "0.00055"
+      }
+    },
+    "mon3_status": {
+      "type": "Badge",
+      "props": {
+        "text": "no fix yet",
+        "variant": "secondary"
+      }
+    },
+    "mon3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "HMAC signing key stored in cleartext in ModelBuilder/Serve path; key recovery possible from disk.",
+        "variant": "body"
+      }
+    },
+    "mon3_action": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Watch for patched release; avoid logging or persisting ModelBuilder artifacts."
+      }
+    }
+  }
+}
